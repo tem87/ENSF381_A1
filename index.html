@@ -20,17 +20,35 @@ Description : index page
     <meta name ="author" content =" Your Name ">
     <link rel ="shortcut icon" href ="favicon.ico" type =" image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Body styles */
+      body {
+        font-family:sans-serif;
+        margin: 0;
+      }
+      /* Header styles */
+    header {
+        background-color: #333;
+        padding: 20px;
+        color: #fff;
+      }
+
+      /* Logo styles */
+      .logo {
+        max-width: 100px;
+      }
+    </style>  
 </head>
 <body>
     <header>
         <!-- Logo and website name go here -->
         <link rel ="shortcut icon" href ="favicon.ico" type =" image/x-icon">
         <h1>WEBSITE NAME</h1>
-        </header>
+    </header>
     <div>
         <!-- Navigation links go here -->
-        <nav>
-            <ul>
+        <nav class="barnav">
+            <ul class="menu">
               <li><a href="index.html">Home</a></li>
               <li><a href="products.html">Products</a></li>
               <li><a href="contact.html">Contact</a></li>
@@ -41,6 +59,7 @@ Description : index page
     <main>
         <!-- About Us Section -->
         <section class="about-us">
+            <h2>About Us</h2>
         <!-- About Us contents go here -->
         </section>
         <section class="shop-now">
@@ -49,10 +68,16 @@ Description : index page
         <!-- Customer Reviews/Testimonials Section -->
         <section class="customer-reviews">
         <!-- Add reviews as needed -->
+        <h2>Customer Reviews</h2>   
+        <p>Excellent customer service. Fast delivery.</p>
+        <p>Guaranteed to get what you order</p>
+        <p>Great products and quick service</p>
+
         </section>
     </main>
     <footer>
         <!-- Copyright notice goes here -->
+        &copy; 2024. All rigths reserved. Powered by -website name-.
     </footer>
 </body>
 </html>
