@@ -12,38 +12,76 @@ Description : products page
 <html lang="en">
     <head>
         <!-- Add meta tags, title, and link to styles.css here -->
-       <title>My Webpage</title>
-       <meta charset ="UTF -8">
-       <meta name ="description" content ="An s">
-       <meta name ="keywords" content =" HTML , Web Development , Example ,
-       img ">
-       <meta name ="author" content =" Your Name ">
-       <link rel ="shortcut icon" href ="favicon.ico" type =" image/x-icon">
-       <link rel="stylesheet" href="styles.css">
+        <title>BloomBoom</title>
+        <meta charset ="UTF -8">
+        <meta name ="description" content ="An s">
+        <meta name ="keywords" content =" HTML , Web Development , Example ,
+        img ">
+        <meta name ="author" content =" Thalia E., Brandon N. ">
+        <link rel ="shortcut icon" href ="favicon.ico" type =" image/x-icon">
+        <link rel="stylesheet" href="styles.css">
        <style>
          /* Body styles */
          body {
            font-family:sans-serif;
            margin: 0;
          }
-         /* Header styles */
-       header {
-           background-color: #333;
-           padding: 20px;
-           color: #fff;
+         header {
+            background-color:#96eaa4;
+            padding: 8px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+          }
+          .logo {
+            max-width: 100px;
+          }
+          .logo img {
+            max-width: 100px;
+            height: auto;
+        }
+        .barnav{
+            background-color: #96eaa4;
+            padding: 20px;
+            text-align: center;
+          }
+          .barnav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
          }
-   
-         /* Logo styles */
-         .logo {
-           max-width: 100px;
-         }
+          .barnav li{
+            /*
+            padding: 10px;*/
+            display: inline;
+            padding: 10px;
+            margin-right: 20px;
+          }
+          .barnav a{
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+          }
+         
+      footer{
+        background-color: #333;
+        padding: 40px;
+        color: #fff;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        font-size: 15px;
+
+      }
        </style>  
    </head>
    <body>
        <header>
            <!-- Logo and website name go here -->
-           <link rel ="shortcut icon" href ="favicon.ico" type =" image/x-icon">
-           <h1>WEBSITE NAME</h1>
+           <a href="#"class="logo"> <img src="logo.png" alt="Logo"></a>
+           <h1>BloomBoom</h1>
            </header>
        <div>
            <!-- Navigation links go here -->
@@ -90,7 +128,7 @@ Description : products page
     </main>
     <footer>
         <!-- Copyright notice goes here -->
-        &copy; 2024. All rigths reserved. Powered by -website name-.
+        &copy; 2024. All rigths reserved. Powered by BloomBoom.
     </footer>
 </body>
 </html>
