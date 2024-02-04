@@ -21,23 +21,16 @@ Description : index page
     <link rel ="shortcut icon" href ="favicon.ico" type =" image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <style>
-      /* Body styles */
       body {
         font-family:sans-serif;
         margin: 0;
       }
-      /* Header styles */
     header {
         background-color:#96eaa4;
         padding: 8px;
         color: #fff;
         display: flex;
         align-items: center;
-      }
-
-      /* Logo styles */
-      .logo {
-        max-width: 100px;
       }
       .logo img {
         max-width: 100px;
@@ -55,8 +48,6 @@ Description : index page
         display: flex;
      }
       .barnav li{
-        /*
-        padding: 10px;*/
         display: inline;
         padding: 10px;
         margin-right: 20px;
@@ -66,42 +57,83 @@ Description : index page
         color: #333;
         font-weight: bold;
       }
-      .customer-reviews {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-        display: flex; 
-      }
-
-      .customer-reviews h1{
-        background-color: #65e14cab;
-        color: #fff;
+      .about-us {
+        text-align: center;
         padding: 10px;
+    }
+    .about-us p{
+      text-align: center;
+      padding: 10px;
+      font-family:sans-serif;
+  }
+    
+      .shop-now {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .shop-now-button {
+        display: inline-block;
+        background-color: #65e14cab; 
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
         border-radius: 5px;
-      }
-
-    .review {
-        border: 1px solid #ddd; /* Border for each review */
-        border-radius: 8px;
-        padding: 15px;
-        margin-bottom: 10px;
-        text-align: center;  
-     }
-
-    .review h3 {
-        color: #333;
-        margin-bottom: 10px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
     }
-
-    .review p {
-        line-height: 1.6;
-        color: #666;
+    
+    .shop-now-button:hover {
+        background-color: #4ca36b; 
     }
+      
+    .customer-reviews {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+  }
+  
+  .customer-reviews h1 {
+      color: #000000;
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block; 
+      margin-bottom: 10px;
+  }
+  
+  .review-container {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center;
+  }
+  
+  .review {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+      width: 45%; 
+      box-sizing: border-box;
+  }
+  
+  .review h3 {
+      color: #333;
+      margin-bottom: 10px;
+  }
+  
+  .review p {
+      line-height: 1.6;
+      color: #666;
+  }
+
     .image2{
       opacity:0.7;
-      width: 50%;
+      width: 35%;
       height: 60px;
     }
 
@@ -111,8 +143,7 @@ Description : index page
         color: #fff;
         text-align: center;
         bottom: 0;
-        width: 100%;
-        position: fixed;
+        position: relative;
         font-size: 15px;
 
       }
@@ -139,52 +170,63 @@ Description : index page
     <main>
         <!-- About Us Section -->
         <section class="about-us">
-            <h2>About Us</h2>
-        <!-- About Us contents go here -->
+            <h2>ABOUT US</h2>
         <p>
-          Welcomt to our webiste! We are a small business that specializes in selling indoor plants and flowers. 
-          We offer a variety of products that are perfect for any occasion. 
-          Our goal is to provide our customers with the best quality products and customer service. 
-          We are dedicated to making sure that our customers are satisfied with their purchase. 
+          We are a small business that specializes in selling indoor plants and flowers. <br>
+          We offer a variety of products that are perfect for any occasion. <br>
+          Our goal is to provide our customers with the best quality products and customer service. <br>
+          We are dedicated to making sure that our customers are satisfied with their purchase. <br> 
           We hope you enjoy your shopping experience with us!
         </p>
         </section>
         <section class="shop-now">
-        <!-- Shop Now Button (as a link to the Products page) -->
+          <h2>SHOP NOW</h2>
+          <a href="products.html" class="shop-now-button">Explore Products</a>
         </section>
+
         <!-- Customer Reviews/Testimonials Section -->
         <section class="customer-reviews">
-        <!-- Add reviews as needed -->
-        <div class="title-custom"> 
-          <h1>Customer Reviews</h1>
+          <div class="title-custom"> 
+              <h1>CUSTOMER REVIEWS</h1>
+          </div>
           
-        </div>
-        
-        <div class="review">
-          <h3>Maria Smith</h3>
-          <img src="star.png" alt="stars" class="image2">
-          <p>Excellent customer service. Fast delivery. The customer
-            support was very helpful and friendly. I will definitely
-            be ordering from here again.</p>
-          </p>
-        </div>
-        <div class="review">
-          <h3>Christopher Malik</h3>
-          <img src="star.png" alt="stars" class="image2">
-          <p>Guaranteed to get what you order. The products are exactly as
-            described and the quality is great. I highly recommend this
-            website!
-          </p>
-        </div>  
-        <div class="review">
-          <h3>Tara Doe</h3>
-          <img src="star.png" alt="stars" class="image2">
-          <p>Great products and prices. The website is easy to navigate and
-            the checkout process is simple. I am very satisfied with my
-            purchase!
-          </p>
-        </div>   
-        </section>
+          <div class="review-container">
+              <div class="review">
+                  <h3>Maria Smith</h3>
+                  <img src="star.png" alt="stars" class="image2">
+                  <p>Excellent customer service. Fast delivery. The customer
+                      support was very helpful and friendly. I will definitely
+                      be ordering from here again.</p>
+            </div>
+              
+            <div class="review">
+                  <h3>Christopher Malik</h3>
+                  <img src="star.png" alt="stars" class="image2">
+                  <p>Guaranteed to get what you order. The products are exactly as
+                      described and the quality is great. I highly recommend this
+                      website!
+                  </p>
+              </div>
+              
+              <div class="review">
+                  <h3>Tara Doe</h3>
+                  <img src="star.png" alt="stars" class="image2">
+                  <p>Great products and prices. The website is easy to navigate and
+                      the checkout process is simple. I am very satisfied with my
+                      purchase.
+                  </p>
+              </div>
+              
+              <div class="review">
+                  <h3>Allison Nolan</h3>
+                  <img src="star.png" alt="stars" class="image2">
+                  <p>Love the plants that I bought. They are beautiful and healthy.
+                      The delivery was fast and the packaging was secure. I will
+                      definitely be ordering from here again!
+                  </p>
+              </div>
+          </div>
+      </section>
     </main>
     <footer>
         <!-- Copyright notice goes here -->

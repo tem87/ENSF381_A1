@@ -39,41 +39,75 @@ Description : contact page
       .logo img {
         max-width: 100px;
         height: auto;
-    }
-    .barnav{
-      background-color: #96eaa4;
-      padding: 20px;
-      text-align: center;
-    }
-    .barnav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-   }
-    .barnav li{
-      /*
-      padding: 10px;*/
-      display: inline;
-      padding: 10px;
-      margin-right: 20px;
-    }
-    .barnav a{
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+      }
+      .barnav{
+        background-color: #96eaa4;
+        padding: 20px;
+        text-align: center;
+      }
+      .barnav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      .barnav li{
+        /*
+        padding: 10px;*/
+        display: inline;
+        padding: 10px;
+        margin-right: 20px;
+      }
+      .barnav a{
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+      .contact, .social-media {
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+
+      .contact h2, .social-media h2 {
+          color: #000000;
+          padding: 10px;
+          border-radius: 5px;
+      }
+     
+
+      .social-media p {
+          margin-top: 10px;
+      }
+      .social-media .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .social-media .social-icons a {
+          margin: 0 10px;
+      }
+
+      .social-media .social-icons img {
+          max-width: 40px; /* Set your desired maximum width */
+          height: auto;
+      }
+
+      .social-media p {
+          margin-top: 10px;
+      }
       footer{
         background-color: #333;
         padding: 40px;
         color: #fff;
         text-align: center;
         bottom: 0;
-        width: 100%;
-        position: fixed;
+        position: relative;
         font-size: 15px;
-
       }
+
     </style>  
 </head>
 <body>
@@ -94,16 +128,22 @@ Description : contact page
         </nav>
     </div>
     <main>
-        <section class="about-us">
+        <section class="contact">
             <h2>Contact Information</h2>
-            <p>WELCOME</p>
-            <p>Emial: info@.com</p>
+            <p>Reach to us for any inquiry</p>
+            <p>Email: bloomboominfo@.com</p>
             <p>Phone: + 1 (568) 567-7823</p>
-            </section>
-            <section class="social-media">
-            <p> Follow us on Social Media</p>
-            <!-- icons with the links to the social media -->
+        </section>
+
+        <section class="social-media">
+            <h2> Follow us on Social Media</h2>
             <p> Be the ﬁrst to know about anything related to our products!</p>
+            <!-- icons with the links to the social media -->
+            <div class="social-icons">
+              <a href="https://www.facebook.com" target="_blank"><img src="fb.png" alt="Facebook"></a>
+              <a href="https://www.twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+              <a href="https://www.instagram.com" target="_blank"><img src="ig.png" alt="Instagram"></a>
+            </div>
         </section>
 
     </main>
