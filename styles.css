@@ -1,8 +1,13 @@
 /*Styling for Products.*/
 /*Note that some of these styles will be applicable to other pages*/
+
+/*Style for Products. Might need to rename body to avoid future conflicts*/
 body {
     font-family: sans-serif;
     margin: 0;
+
+    /*Changes background to #ddd*/
+    background-color: #ddd;
 }
 
 header {
@@ -53,14 +58,18 @@ header {
 
 .prod {
     width: 35%;
-    margin: 10px;
-    padding: 70px;
+    /*Adds padding of 20px and margin of 20px*/
+    margin: 20px;
+    padding: 20px;
     left: 50%;
     border: 1px solid #ddd;
     border-radius: 7px;
     text-align: center;
     display: inline-block;
     flex: row;
+
+    /*Makes the background color light gray*/
+    background-color: #f9f9f9;
 }
 
 .prod img {
@@ -89,6 +98,16 @@ header {
 
 .cart:hover {
     background-color: #4ca36b;
+}
+
+/*Code for Making Product List Adaptable.*/
+/* Add a media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .prod {
+        width: 100%; /* Change width to 100% for smaller screens */
+        margin: 10px auto; /* Center align on smaller screens */
+        padding: 20px; /* Decrease padding for smaller screens */
+    }
 }
 
 footer {
