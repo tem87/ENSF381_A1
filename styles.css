@@ -4,8 +4,7 @@ body {
     font-family: sans-serif;
     margin: 0;
 
-    /*Changes background to #ddd*/
-    background-color: #ddd;
+    background-color: #ffffff;
 }
 
 header {
@@ -65,13 +64,19 @@ footer {
 }
 
 /*Styling for Products*/
-.prod-container{
+.products-page{
+    background-color: #ddd
+}
+
+
+.prod-section{
     /*Product Section*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
     margin: 20px;
+    background-color: #ddd;
 
 }
 
@@ -139,8 +144,11 @@ footer {
 }
 
 /*Styling for Contact*/
-.contact-container{
-    
+.contact-page{
+    background-color:#ffffff;
+}
+
+.contact-section{
     background: #ddd;
     padding: 20px;
     margin: 20px;
@@ -157,7 +165,9 @@ footer {
 
 .contact-method h3{
     color: #000000;
-    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
 }
 
 .contact-method p{
@@ -172,33 +182,3 @@ a:hover {
     color: #007BFF;
 }
 
-.contact, .social-media {
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  .contact h2, .social-media h2 {
-      color: #000000;
-      padding: 10px;
-      border-radius: 5px;
-  }
-  .social-media p {
-      margin-top: 10px;
-  }
-  .social-media .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .social-media .social-icons a {
-      margin: 0 10px;
-  }
-
-  .social-media .social-icons img {
-      max-width: 40px; /* Set your desired maximum width */
-      height: auto;
-  }
-  .social-media p {
-      margin-top: 10px;
-  }
