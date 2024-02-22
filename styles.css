@@ -106,16 +106,17 @@ header {
 }
 
 .cart {
-    background-color: #65e14cab;
+    background-color: #4caf50;
     color: #fff;
-    padding: 8px 16px;
+    padding: 10px;
+    margin: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .cart:hover {
-    background-color: #4ca36b;
+    background-color: #45A049;
 }
 
 /*Code for Making Product List Adaptable.*/
