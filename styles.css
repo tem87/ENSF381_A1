@@ -1,0 +1,184 @@
+
+/*Styling for all pages*/
+body {
+    font-family: sans-serif;
+    margin: 0;
+
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #96eaa4;
+    padding: 8px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.barnav {
+    background-color: #96eaa4;
+    padding: 20px;
+    text-align: center;
+}
+
+.barnav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.barnav li {
+    display: inline;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.barnav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+    font-size: 15px;
+}
+
+/*Styling for Products*/
+.products-page{
+    background-color: #ddd
+}
+
+
+.prod-section{
+    /*Product Section*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ddd;
+
+}
+
+.prod {
+    width: 35%;
+    /*Adds padding of 20px and margin of 20px*/
+    margin: 20px;
+    padding: 20px;
+    left: 50%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    flex: row;
+
+    /*Makes the background color light gray*/
+    background-color: #f9f9f9;
+}
+
+.prod:hover {
+    background-color: #ffffff; /* Change background color on hover */
+}
+
+.prod img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.prod h2 {
+    margin-top: 10px;
+
+}
+
+.prod p {
+    color: #007BFF;
+    font-weight: bold;
+    
+}
+
+.cart {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart:hover {
+    background-color: #45A049;
+}
+
+/*Code for Making Product List Adaptable.*/
+/* Add a media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .prod {
+        width: 35%; /* Change width to 100% for smaller screens */
+        margin: 20px; /* Center align on smaller screens */
+        padding: 20px; /* Decrease padding for smaller screens */
+    }
+}
+
+/*Styling for Contact*/
+.contact-page{
+    background-color:#ffffff;
+}
+
+.contact-section{
+    background: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+.contact-method{
+    margin: 0px;
+    padding: 0px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.contact-method h3{
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.contact-method p{
+    margin-top: 10px;
+}
+
+a {
+    color:#000000;
+}
+
+a:hover {
+    color: #007BFF;
+}
+

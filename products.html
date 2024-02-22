@@ -1,10 +1,10 @@
 <!--
 =========================================================
 Name        : products.html
-Assignment  : 1
+Assignment  : 2
 Author(s)   : Thalia Espinoza,  Brandon Nguyen
 UCID        : 30195212, 30169800
-Submission  : Feb 5, 2024
+Submission  : Feb 22, 2024
 Description : products page 
 =========================================================
 -->
@@ -24,101 +24,10 @@ Description : products page
         <link rel ="shortcut icon" href ="favicon.ico" type =" image/x-icon">
         <link rel="stylesheet" href="styles.css">
 
-        <title>Prodcuts - BloomBoom</title>
-       <style>
-         /* Body styles */
-         body {
-           font-family:sans-serif;
-           margin: 0;
-         }
-         header {
-            background-color:#96eaa4;
-            padding: 8px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-        }
-        .main{
-            text-align: center;
-        }
-        .logo {
-            max-width: 100px;
-        }
-        .logo img {
-          max-width: 100px;
-          height: auto;
-        }
-        .barnav{
-            background-color: #96eaa4;
-            padding: 20px;
-            text-align: center;
-        }
-        .barnav ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          display: flex;
-        }
-        .barnav li{
-          /*
-          padding: 10px;*/
-          display: inline;
-          padding: 10px;
-          margin-right: 20px;
-        }
-        .barnav a{
-          text-decoration: none;
-          color: #333;
-          font-weight: bold;
-        }
+        <title>Products - BloomBoom</title>
 
-        .prod {
-          width: 35%;
-          margin: 10px;
-          padding: 70px;
-          left: 50%;
-          border: 1px solid #ddd;
-          border-radius: 7px;
-          text-align: center;
-          display: inline-block;
-          flex: row;
-        }
-        .prod img {
-          width: 100%;
-          max-height: 400px;
-          object-fit: cover;
-          border-radius: 5px;
-        }
-        .prod h2 {
-          margin-top: 10px;
-        }
-        .prod p {
-          color: #666;
-        }
-        .cart {
-          background-color: #65e14cab;
-          color: #fff;
-          padding: 8px 16px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-        .cart:hover {
-          background-color: #4ca36b;
-        }
-        footer{
-          background-color: #333;
-          padding: 40px;
-          color: #fff;
-          text-align: center;
-          bottom: 0;
-          position: relative;
-          font-size: 15px;
-  
-        }
-       </style>  
    </head>
-   <body>
+   <body class ="products-page">
        <header class="header">
            <!-- Logo and website name go here -->
            <a href="#"class="logo"> <img src="logo.png" alt="Logo"></a>
@@ -135,9 +44,10 @@ Description : products page
                </ul>
            </nav>
        </div>
-    <h1>Products</h1>
+    
     <main>
-        
+    
+    <section class = "prod-section">
         <div class="prod"> 
             <img src="prod1.jpg" alt="Product1">
             <h2>Little Cactus</h2>
@@ -174,6 +84,22 @@ Description : products page
             <p>Price: $45.00</p>
             <button class="cart">Add to Cart</button>
         </div>
+        <div class="prod"> 
+          <img src="prod7.jpg" alt="Product7">
+          <h2>Zamioculcas</h2>
+          <p>Price: $25.00</p>
+          <button class="cart">Add to Cart</button>
+      </div>
+      <div class="prod"> 
+        <img src="prod8.jpg" alt="Product8">
+        <h2>Peace Lily</h2>
+        <p>Price: $30.00</p>
+        <button class="cart">Add to Cart</button>
+    </div>
+    </section>
+
+    
+
     </main>
     <footer>
         <!-- Copyright notice goes here -->
