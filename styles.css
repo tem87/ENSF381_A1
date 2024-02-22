@@ -139,6 +139,39 @@ footer {
 }
 
 /*Styling for Contact*/
+.contact-container{
+    
+    background: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+.contact-method{
+    margin: 0px;
+    padding: 0px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.contact-method h3{
+    color: #000000;
+    padding: 10px;
+}
+
+.contact-method p{
+    margin-top: 10px;
+}
+
+a {
+    color:#000000;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
 .contact, .social-media {
     padding: 20px;
     border-radius: 10px;
