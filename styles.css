@@ -56,6 +56,16 @@ header {
     font-weight: bold;
 }
 
+.prod-container{
+    /*Product Section*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+
+}
+
 .prod {
     width: 35%;
     /*Adds padding of 20px and margin of 20px*/
@@ -63,7 +73,7 @@ header {
     padding: 20px;
     left: 50%;
     border: 1px solid #ddd;
-    border-radius: 7px;
+    border-radius: 10px;
     text-align: center;
     display: inline-block;
     flex: row;
@@ -105,7 +115,7 @@ header {
 @media (max-width: 768px) {
     .prod {
         width: 100%; /* Change width to 100% for smaller screens */
-        margin: 10px auto; /* Center align on smaller screens */
+        margin: 20px auto; /* Center align on smaller screens */
         padding: 20px; /* Decrease padding for smaller screens */
     }
 }
