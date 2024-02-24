@@ -122,7 +122,6 @@ main {
     text-align: center;
     display: inline-block;
     flex: row;
-
     /*Makes the background color light gray*/
     background-color: #f9f9f9;
 }
