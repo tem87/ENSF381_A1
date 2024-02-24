@@ -3,20 +3,26 @@
 body {
     font-family: sans-serif;
     margin: 0;
-
     background-color: #ffffff;
 }
 
 header {
-    background-color: #96eaa4;
-    padding: 8px;
-    color: #fff;
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    color: #fff;
 }
 
 .main {
     text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -28,40 +34,65 @@ header {
     height: auto;
 }
 
-.barnav {
-    background-color: #96eaa4;
-    padding: 20px;
-    text-align: center;
-}
-
-.barnav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.barnav li {
-    display: inline;
-    padding: 10px;
-    margin-right: 20px;
-}
-
-.barnav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
 footer {
     background-color: #333;
-    padding: 40px;
+    padding: 10px;
+    margin: 0;
     color: #fff;
     text-align: center;
-    bottom: 0;
-    position: relative;
-    font-size: 15px;
 }
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #333;    
+    
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*Styling for home page*/
+.about-us {
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    text-justify: inter-word;
+}	
+
+.shop-now-btn {
+    padding: 10px;
+    margin: 20px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.customer-reviews{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+
+
+}
+
+
 
 /*Styling for Products*/
 .products-page{
@@ -174,11 +205,57 @@ footer {
     margin-top: 10px;
 }
 
-a {
+.contact-method a {
     color:#000000;
 }
 
-a:hover {
+.contact-method a:hover {
     color: #007BFF;
 }
 
+/*Styling for Login*/
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+label {
+    margin: 10px;
+    display: block;
+}
+
+input {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.login-btn {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    border: none;
+}
+
+.login-btn:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+.signup-link{
+    margin: 10px;
+    color: #007BFF;
+}
+
+.signup-link:hover{
+    text-decoration: underline;
+}
