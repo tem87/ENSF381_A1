@@ -252,6 +252,7 @@ main {
     border-radius: 10px;
 }
 .form-field {
+    flex-direction: column;
     display: block;
     margin: 10px;
     border-radius: 5px;
@@ -275,14 +276,25 @@ main {
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
+    opacity: 0.5;
     border: none;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s; /* Add transition for smoother hover effect */
 }
+
 
 #signup-btn:hover {
     background-color: #45A049; /* Slightly darker shade of green */
     opacity: 1.0;
+}
+
+
+.error-messages {
+    border: 2px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
 }
 
 
