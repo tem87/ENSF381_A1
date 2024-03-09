@@ -1,10 +1,10 @@
 <!--
 =========================================================
 Name        : products.html
-Assignment  : 2
+Assignment  : 3
 Author(s)   : Thalia Espinoza,  Brandon Nguyen
 UCID        : 30195212, 30169800
-Submission  : Feb 24, 2024
+Submission  : 
 Description : products page 
 =========================================================
 -->
@@ -56,58 +56,131 @@ Description : products page
             <img src="prod1.jpg" alt="Product1">
             <h2>Little Cactus</h2>
             <p>Price: $20.00</p>
-            <button class="cart">Add to Cart</button>
+            <button class="cart" onclick="addToCart('Little Cactus', 20)">Add to Cart</button>
         </div>
         <div class="prod"> 
             <img src="prod2.jpg" alt="Product2">
             <h2>Orchid</h2>
             <p>Price: $30.00</p>
-            <button class="cart">Add to Cart</button>
+            <button class="cart" onclick="addToCart('Orchid',30)">Add to Cart</button>
         </div>
         <div class="prod"> 
             <img src="prod3.jpg" alt="Product3">
             <h2>Snake Plant</h2>
             <p>Price: $25.00</p>
-            <button class="cart">Add to Cart</button>
+            <button class="cart" onclick="addToCart('Snake Plant', 25)">Add to Cart</button>
         </div>
         <div class="prod"> 
             <img src="prod4.jpg" alt="Product4">
             <h2>Jade Plant</h2>
             <p>Price: $40.00</p>
-            <button class="cart">Add to Cart</button>
+            <button class="cart" onclick="addToCart('JadePlant', 40)">Add to Cart</button>
         </div>
         <div class="prod"> 
             <img src="prod5.jpg" alt="Product5">
             <h2>Spider Plant</h2>
             <p>Price: $35.00</p>
-            <button class="cart">Add to Cart</button>
+            <button class="cart" onclick="addToCart('Spider Plant', 35)">Add to Cart</button>
         </div>
         <div class="prod"> 
             <img src="prod6.jpg" alt="Product6">
             <h2>Monstera Deliciosa</h2>
             <p>Price: $45.00</p>
-            <button class="cart">Add to Cart</button>
+            <button class="cart" onclick="addToCart('Monstera Deliciosa', 45)">Add to Cart</button>
         </div>
         <div class="prod"> 
           <img src="prod7.jpg" alt="Product7">
           <h2>Zamioculcas</h2>
           <p>Price: $25.00</p>
-          <button class="cart">Add to Cart</button>
+          <button class="cart" onclick="addToCart('Zamioculcas', 25)">Add to Cart</button>
       </div>
       <div class="prod"> 
         <img src="prod8.jpg" alt="Product8">
         <h2>Peace Lily</h2>
         <p>Price: $30.00</p>
-        <button class="cart">Add to Cart</button>
+        <button class="cart" onclick="addToCart('Peace Lily', 30)">Add to Cart</button>
     </div>
     </section>
-
-    
-
     </main>
+
+    <div id="cart-section">
+        
+        <!-- Cart display will be added dynamically here -->
+    </div>
+
     <footer>
         <!-- Copyright notice goes here -->
         <p>&copy; 2024. All rigths reserved. Powered by BloomBoom.</p>
     </footer>
+    <script>
+        // Cart data
+        let cartItems = [];
+
+        // Function to add item to cart
+        function addToCart(productName, price) {           
+            let existingItem = cartItems.find(item => item.productName === productName);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cartItems.push({ productName: productName, price: price, quantity: 1 });
+            }
+            updateCartDisplay();
+            alert(productName + " has been added to the cart.");
+        }
+
+        // Function to update cart display
+        function updateCartDisplay() {
+            let cartSection = document.getElementById("cart-section");
+            cartSection.innerHTML = ""; // Clear previous content
+
+            // Append the heading
+            let cartHeading = document.createElement("h2");
+            cartHeading.textContent = "Shopping Cart";
+            cartSection.appendChild(cartHeading);
+
+            cartItems.forEach(item => {
+                let cartItemDiv = document.createElement("div");
+                cartItemDiv.classList.add("cart-item");
+
+                let itemName = document.createElement("p");
+                itemName.textContent = item.productName;
+                cartItemDiv.appendChild(itemName);
+
+                let itemPrice = document.createElement("p");
+                itemPrice.textContent = "$" + item.price;
+                cartItemDiv.appendChild(itemPrice);
+
+                let itemQuantity = document.createElement("p");
+                itemQuantity.textContent = item.quantity;
+                cartItemDiv.appendChild(itemQuantity);
+
+                let removeButton = document.createElement("button");
+                removeButton.textContent = "Remove";
+                removeButton.classList.add("cart");
+                removeButton.onclick = function () {
+                    removeItem(item.productName);
+                };
+                cartItemDiv.appendChild(removeButton);
+
+                cartSection.appendChild(cartItemDiv);
+            });
+        }
+
+        // Function to remove item from cart
+        function removeItem(productName) {
+            let index = cartItems.findIndex(item => item.productName === productName);
+            if (index !== -1) {
+                if (cartItems[index].quantity > 1) {
+                    cartItems[index].quantity--;
+                } else {
+                    cartItems.splice(index, 1);
+                }
+                updateCartDisplay();
+            }
+        }
+
+        // Initial cart display
+        updateCartDisplay();
+    </script>    
 </body>
 </html>
