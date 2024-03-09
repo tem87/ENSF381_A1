@@ -175,9 +175,6 @@ main {
 
 
 /*Code for Cart-Section in Products*/
-
-
-
 #cart-section{
     display: flex;
     flex-direction: column;
@@ -201,6 +198,9 @@ main {
     text-align: center;
 }
 
+.cart-item button:hover {
+    background-color: #ff0000;
+}
 
 
 /*Styling for Contact*/
