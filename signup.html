@@ -1,0 +1,114 @@
+<!--
+=========================================================
+Name        : signup.html
+Assignment  : 3
+Author(s)   : Thalia Espinoza,  Brandon Nguyen
+UCID        : 30195212, 30169800
+Submission  : 
+Description : signup page 
+=========================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add meta tags, title, and link to styles.css here -->
+    <title>BloomBoom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <!-- Logo and website name go here -->
+    <div class="logo-container">
+        <a href="#" class="logo"> <img src="logo.png" alt="Logo"></a>
+    </div>
+    <div class="company-name">
+        <h1>BloomBoom</h1>
+    </div>
+</header>
+<div class="barnav">
+    <!-- Navigation links go here -->
+    <nav >
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link">Login</a>
+    </nav>
+</div>
+<section class="signup-form">
+    <div class="content">
+        <form id="signup-form">
+            <div class="form-field">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <div class="form-field">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            <button type="submit" id="signup-btn">Signup</button>
+        </form>
+    </div>
+</section>
+
+<div id="error-messages" class="error-messages">
+    <!--Content Dynamically added-->
+</div>
+
+<script>
+    const form = document.getElementById("signup-form");
+    const errorMessages = document.getElementById("error-messages");
+
+    form.addEventListener("submit", function(event) {
+        errorMessages.innerHTML = ""; // Clear previous error messages
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+        const email = document.getElementById("email").value;
+
+        const usernamePattern = /^[a-zA-Z][a-zA-Z0-9_-]{2,19}$/;
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+[{\]}|;:'",.<>?/`~])[A-Za-z\d!@#$%^&*()-_=+[{\]}|;:'",.<>?/`~]{8,}$/;
+        const emailPattern = /^[^\s@]+@(?:[^\s@]+\.)+(com|net|io)$/;
+
+        if (!usernamePattern.test(username)) {
+            appendErrorMessage("Username must be between 3 and 20 characters long, start with a letter, and contain only alphanumeric characters, hyphens, and underscores.");
+        }
+        if (!passwordPattern.test(password)) {
+            appendErrorMessage("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.");
+        }
+        if (password !== confirmPassword) {
+            appendErrorMessage("Passwords do not match.");
+        }
+        if (!emailPattern.test(email)) {
+            appendErrorMessage("Email must be a valid email address format.");
+        }
+
+        if (errorMessages.children.length > 0) {
+            event.preventDefault(); // Prevent form submission if there are errors
+        }
+    });
+
+    function appendErrorMessage(message) {
+        const errorMessage = document.createElement("p");
+        errorMessage.textContent = message;
+        errorMessages.appendChild(errorMessage);
+    }
+</script>
+
+<footer>
+    <!-- Copyright notice goes here -->
+    <p>&copy; 2024. All rights reserved. Powered by BloomBoom.</p>
+</footer>
+</body>
+</html>
