@@ -344,7 +344,7 @@ input {
 .signup-link:hover{
     text-decoration: underline;
 }
-//stylying for messages in login
+
 .messageLogin {
     border: 2px;
     background-color: #f9f9f9;
