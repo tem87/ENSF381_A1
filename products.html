@@ -104,7 +104,8 @@ Description : products page
     </main>
 
     <div id="cart-section">
-        <!--Cart Display will be added dynamically here-->
+        
+        <!-- Cart display will be added dynamically here -->
     </div>
 
     <footer>
@@ -116,7 +117,7 @@ Description : products page
         let cartItems = [];
 
         // Function to add item to cart
-        function addToCart(productName, price) {
+        function addToCart(productName, price) {           
             let existingItem = cartItems.find(item => item.productName === productName);
             if (existingItem) {
                 existingItem.quantity++;
@@ -132,6 +133,11 @@ Description : products page
             let cartSection = document.getElementById("cart-section");
             cartSection.innerHTML = ""; // Clear previous content
 
+            // Append the heading
+            let cartHeading = document.createElement("h2");
+            cartHeading.textContent = "Shopping Cart";
+            cartSection.appendChild(cartHeading);
+
             cartItems.forEach(item => {
                 let cartItemDiv = document.createElement("div");
                 cartItemDiv.classList.add("cart-item");
@@ -141,11 +147,11 @@ Description : products page
                 cartItemDiv.appendChild(itemName);
 
                 let itemPrice = document.createElement("p");
-                itemPrice.textContent = "Price: $" + item.price;
+                itemPrice.textContent = "$" + item.price;
                 cartItemDiv.appendChild(itemPrice);
 
                 let itemQuantity = document.createElement("p");
-                itemQuantity.textContent = "Quantity: " + item.quantity;
+                itemQuantity.textContent = item.quantity;
                 cartItemDiv.appendChild(itemQuantity);
 
                 let removeButton = document.createElement("button");

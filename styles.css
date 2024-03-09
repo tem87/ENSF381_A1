@@ -173,6 +173,36 @@ main {
     }
 }
 
+
+/*Code for Cart-Section in Products*/
+
+
+
+#cart-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#cart-section h2 {
+    margin-bottom: 10px; /* Optional: Add margin below the heading */
+}
+
+
+
+.cart-item {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between; /* Spacing between items */
+    padding: 10px;
+    width: 300px; /* Optional: Adjust the width as needed */
+    text-align: center;
+}
+
+
+
 /*Styling for Contact*/
 .contact-page{
     background-color:#ffffff;
