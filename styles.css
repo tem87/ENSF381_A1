@@ -241,7 +241,7 @@ main {
 }
 
 /*Styling for SignUp Page*/
-#signup-form{
+.signup-form{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -261,6 +261,7 @@ main {
 .form-field label {
     display: block;
     margin: 10px;
+    
     
 }
 
@@ -351,5 +352,3 @@ input {
     padding: 10px;
     margin: 20px;
 }
-
-
