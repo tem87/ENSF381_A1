@@ -80,7 +80,7 @@ Description : login page
           //2nd step: extract data
           const userData = data.map(user => {
             return {
-              name: user.name,
+              username: user.username,
               email: user.email
             }
           });
@@ -90,7 +90,7 @@ Description : login page
           const enteredPassword = document.getElementById('password').value;
 
           //4th step: validate user input with the json data
-          const validate = userData.find(user => user.name === enteredUsername && user.email === enteredPassword);
+          const validate = userData.find(user => user.username === enteredUsername && user.email === enteredPassword);
 
           //5th step: display message
           const messageContainer = document.getElementById('messageContainer');
@@ -118,11 +118,7 @@ Description : login page
         messageContainer.className = 'messageLogin';
     }
     
-         
-
     </script>
-
-
 
 </body>
 </html>
