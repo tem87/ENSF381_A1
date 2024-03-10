@@ -47,14 +47,14 @@ Description : login page
   </div>
   <main>
     <section class="login-form">
-      <form action="#" method="post" onsubmit="event.preventDefault(); login();">
+      <form action="#" method="post">
           <label for="username">Username:</label>
           <input type="text" id="username" name="username" required placeholder="Enter your username">
 
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" required placeholder="Enter your password">
 
-          <button type="submit" class="login-btn">Login</button>
+          <button type="button" class="login-btn" onclick="login()">Login</button>
             <p>Don't have an account? <a href="signup.html" class="signup-link">Sign up here!</a></p>
       </form>
      
@@ -70,6 +70,12 @@ Description : login page
     </footer>
 
     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.login-btn').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            login();
+        });
+      });
       async function login() {
         console.log('Login function called');
         try{
@@ -97,9 +103,9 @@ Description : login page
           const message = document.getElementById('message');
 
           if(validate){
-            showMessage(messageContainer, 'Login successful!');
+            showMessage(messageContainer, 'Login successful!', true);
           } else {
-            showMessage(messageContainer, 'Invalid username or password. Please try again');
+            showMessage(messageContainer, 'Invalid username or password. Please try again', false);
           }
         } catch (error) {
           alert('Error fetching data from the API. Please try again')
@@ -107,7 +113,7 @@ Description : login page
       }
     
 
-      function showMessage(messageContainer, text) {
+      function showMessage(messageContainer, text, isSuccessful) {
         while (messageContainer.firstChild) {
             messageContainer.removeChild(messageContainer.firstChild);
         }
@@ -115,7 +121,10 @@ Description : login page
         const message = document.createElement('p');
         message.textContent = text;
         messageContainer.appendChild(message); 
-        messageContainer.className = 'messageLogin';
+        messageContainer.className = isSuccessful ? 'messageSuccess' : 'messageFailed';
+        //messageContainer.className = 'messageLogin';
+
+        
     }
     
     </script>

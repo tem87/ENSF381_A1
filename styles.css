@@ -291,7 +291,7 @@ main {
 }
 
 
-.error-messages {
+.error-message {
     border: 2px;
     background-color: #f9f9f9;
     padding: 10px;
@@ -346,8 +346,18 @@ input {
     text-decoration: underline;
 }
 
-.messageLogin {
-    border: 2px solid black; /* Change border color to black */
+
+
+
+.messageSuccess {
+    border: 2px solid black; 
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+}
+
+.messageFailed {
+    border: 2px solid black; 
     background-color: #f9f9f9;
     padding: 10px;
     margin: 20px;
